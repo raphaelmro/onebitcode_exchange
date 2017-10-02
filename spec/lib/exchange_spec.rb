@@ -9,6 +9,5 @@ describe Currency do
 
     value = Currency::exchange currency, currency_destination, quantity
     expect(value.is_a? Numeric).to eql(true)
-    expect(value != 0).to eql(true)
   end
 end
