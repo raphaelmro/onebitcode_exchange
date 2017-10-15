@@ -14,5 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require tether
-//= reqiore bootstrap
+//= require bootstrap
 //= require_tree .
+$(document).ready(function(event){
+    $('#quantity').on("input", function () {
+        var qtyInput = this.value;
+        alert(qtyInput);
+    })
+})
