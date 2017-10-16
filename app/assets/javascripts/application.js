@@ -11,14 +11,8 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
+//= require rails-ujs
 //= require tether
 //= require bootstrap
+//= require turbolinks
 //= require_tree .
-$(document).ready(function(event){
-    $('#quantity').on("input", function () {
-        var qtyInput = this.value;
-        alert(qtyInput);
-    })
-})
