@@ -33,7 +33,8 @@ gem "font-awesome-rails"
 # gem 'capistrano-rails', group: :development
 
 gem 'rest-client'
-gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'materialize-sass'
+gem 'material_icons'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
