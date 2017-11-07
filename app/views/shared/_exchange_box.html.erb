@@ -1,33 +1,41 @@
-<div class="exchange_box">
-  <div class="card">
-    <div class="card-header text-center">
-      Simule sua conversão
-    </div>
-    <div class="card-block">
-      <%= form_tag("/exchange", method: "post", id: "exchange_form") do %>
-          <div class="local_currency">
-            <div class="form-group">
-              <p class="title">Moeda Local</p>
-              <%= select_tag "currency", options_for_select(currency_select, "BRL"), class: "form-control", id: "currency" %>
-            </div>
-            <div class="form-group">
-              <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Valor ($10)" step="any" onkeyup="" required>
+<div class="row">
+  <div class="col s12 m6">
+    <div class="card grey lighten-4">
+      <div class="card-content black-text">
+        <span class="card-title">Simule sua conversão</span>
+          <%= form_tag("/exchange", method: "post", id: "exchange_form") do %>
+              <div class="local_currency">
+                <div class="row">
+                  <div class="input-field col m12">
+                    <p class="title">Moeda Local</p>
+                    <%= select_tag 'currency', options_for_select(currency_select, "BRL"), class: 'form-control', id: 'currency' %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col m12">
+                    <input placeholder="Quantity($ 10)" type="number" name="quantity" id="quantity" step="any" onkeyup="" required>
+                  </div>
+                </div>
+              </div>
 
-            </div>
-          </div>
-          <div class="destination_currency">
-            <div class="form-group">
-              <p class="title">Moeda Pretendida</p>
-              <%= select_tag "currency_destination", options_for_select(currency_select, "EUR"), class: "form-control", id: "currency_destination"%>
-            </div>
-            <div id="change-currency">
-              <%= link_to image_tag('/exchange_icon.png', border:0, class:'exchange', id:'toggle-currencies') %>
-            </div>
-            <div class="form-group">
-              <input type="text" id="result" name="result" class="form-control" placeholder="Resultado" readonly>
-            </div>
-          </div>
-      <% end %>
+              <div class="destination_currency">
+                <div class="row">
+                  <div class="input-field col m12">
+                    <p class="title">Moeda Pretentedida</p>
+                    <%= select_tag 'currency_destination', options_for_select(currency_select, "EUR"), id: 'currency_destination' %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div id="change-currency">
+                    <%= link_to image_tag('/exchange_icon.png', border: 0, class: 'exchange', id: 'exchange') %>
+                  </div>
+                </div>
+                <div class="row">
+                  <input type="text" id="result" name="result" placeholder="Resultado" readonly>
+                </div>
+              </div>
+          <% end %>
+      </div>
     </div>
   </div>
 </div>
