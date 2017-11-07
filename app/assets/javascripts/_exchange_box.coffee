@@ -1,5 +1,6 @@
 $(document).ready ->
-  $('#quantity').change ->
+
+  $('#quantity').keyup ->
     if $('form').attr('action') == '/exchange'
       update_value()
 
@@ -9,6 +10,10 @@ $(document).ready ->
 
     $('#currency').val(currency_destination)
     $('#currency_destination').val(local_currency)
+
+    $('#currency').material_select()
+    $('#currency_destination').material_select()
+
     update_value()
 
 update_value = ->
