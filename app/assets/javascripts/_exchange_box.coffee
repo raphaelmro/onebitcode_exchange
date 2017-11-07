@@ -1,21 +1,14 @@
 $(document).ready ->
-  $('#quantity').change () ->
-    update_value()
+  $('#quantity').change ->
+    if $('form').attr('action') == '/exchange'
+      update_value()
 
-  $('.exchange').click (e) ->
-    e.preventDefault()
+  $('.exchange').click () ->
+    local_currency = $('#currency').val()
+    currency_destination = $('#currency_destination').val()
 
-    selected_text_local = $('#currency').find(":selected").val()
-    selected_text_dest= $('#currency_destination').find(":selected").val()
-    support = $('#currency').find(":selected").val()
-
-    alert("Local: " + selected_text_local)
-    alert("Dest: " + selected_text_dest)
-    alert("Support: " + support)
-
-    $('#currency').val(selected_text_dest)
-    $('#currency_destination').val(support)
-
+    $('#currency').val(currency_destination)
+    $('#currency_destination').val(local_currency)
     update_value()
 
 update_value = ->
