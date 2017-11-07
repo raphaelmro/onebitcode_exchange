@@ -1,21 +1,20 @@
 $(document).ready ->
-  $('#quantity').keyup () ->
+  $('#quantity').change () ->
     update_value()
 
   $('.exchange').click (e) ->
     e.preventDefault()
-    local_currencyVal = $('#currency option:selected').val()
-    local_currencyTxt = $('#currency option:selected').text()
 
-    currency_destinationVal = $('#currency_destination option:selected').val()
-    currency_destinationTxt = $('#currency_destination option:selected').text()
+    selected_text_local = $('#currency').find(":selected").val()
+    selected_text_dest= $('#currency_destination').find(":selected").val()
+    support = $('#currency').find(":selected").val()
 
-    $('#currency option:selected').val(currency_destinationVal)
-    $('#currency option:selected').text(currency_destinationTxt)
+    alert("Local: " + selected_text_local)
+    alert("Dest: " + selected_text_dest)
+    alert("Support: " + support)
 
-    $('#currency_destination option:selected').val(local_currencyVal)
-    $('#currency_destination option:selected').text(local_currencyTxt)
-
+    $('#currency').val(selected_text_dest)
+    $('#currency_destination').val(support)
 
     update_value()
 
