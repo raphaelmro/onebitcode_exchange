@@ -13,8 +13,24 @@ nav.nav-center ul li a {
   display: inline-block;
 }
 
+.img-responsive {
+  height: 75px;
+}
+
 .box{
   padding-top: 65px;
+  width: 42%;
+}
+
+.big-div{
+  padding: 7%;
+}
+
+.phrase{
+  color: #F5F5F5;
+  background:#7f7f7f;
+  background:rgba(0,0,0,0.5);
+  text-align: center;
 }
 
 .center-cols{
