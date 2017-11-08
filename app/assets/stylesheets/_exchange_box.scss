@@ -1,33 +1,26 @@
-.exchange_box{
-  .card{
-    border: 0;
-    .card-header{
-      background-color: #c91a1aea;
-      border-radius: 0;
-      color: white;
-      font-weight: 700;
-    }
-    .card-block{
-      padding: 17px;
-      .title{
-        color: #632a2f;
-        font-weight: 700;
-      }
-      .btn-exchange{
-        background-color: #5bc0de;
-        border-color: #5bc0de;
-        border-radius: 0;
-      }
+nav{
+  background-color: rgba(0,0,0,0);
+}
 
-      .exchange{
-          max-height: 75px;
-          padding: 6px;
-          margin: 5%;
-          margin-top: -2%;
-          margin-left: 33%;
-      }
-    }
-  }
+nav.nav-center ul {
+  text-align: center;
+}
+nav.nav-center ul li {
+  display: inline;
+  float: none;
+}
+nav.nav-center ul li a {
+  display: inline-block;
+}
+
+.box{
+  padding-top: 65px;
+}
+
+.center-cols{
+  float:none; /* disable the float */
+  display: inline-block; /* make blocks inline-block */
+  text-align: initial; /* restore text-align to default */
 }
 
 .exchange{
