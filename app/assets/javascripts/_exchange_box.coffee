@@ -16,6 +16,7 @@ $(document).ready ->
 
     update_value()
 
+
 update_value = ->
   $.ajax '/exchange',
     type: 'POST'
