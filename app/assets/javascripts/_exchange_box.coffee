@@ -15,6 +15,11 @@ $(document).ready ->
     $('#currency_destination').material_select()
 
     update_value()
+  
+  $('select').on "change", ->
+    if $('form').attr('action') == '/exchange'
+        update_value()
+    
 
 
 update_value = ->
